@@ -46,64 +46,65 @@ if ((isset($_POST['n1']) == false)
         $listhijos[] =
             $_POST['n4'] . ' hijos: ' .  $_POST['h4'];
     }
-}
-if (count($listhijos) > 0) {
-    echo 'Las personas con hijos son <hr>';
-    foreach ($listhijos as $perconhijos) {
-        echo $perconhijos . '<hr>';
-    }
-} else {
-    echo ' Ninguna de las personas tiene hijos <hr>';
-}
 
-$listmayores = [];
-if ($_POST['e1'] > 18) {
-    $listmayores[] =
-        $_POST['n1'] . ' edad: ' .  $_POST['e1'];
-}
-if ($_POST['e2'] > 18) {
-    $listmayores[] =
-        $_POST['n2'] . ' edad: ' .  $_POST['e2'];
-}
-if ($_POST['e3'] > 18) {
-    $listmayores[] =
-        $_POST['n3'] . ' edad: ' .  $_POST['e3'];
-}
-if ($_POST['e4'] > 18) {
-    $listmayores[] =
-        $_POST['n4'] . ' edad: ' .  $_POST['e4'];
-}
-if (count($listmayores) > 0) {
-    echo 'Las personas mayores son: <hr>';
-    foreach ($listmayores as $mayores) {
-        echo $mayores . '<hr>';
+    if (count($listhijos) > 0) {
+        echo 'Las personas con hijos son <hr>';
+        foreach ($listhijos as $perconhijos) {
+            echo $perconhijos . '<hr>';
+        }
+    } else {
+        echo ' Ninguna de las personas tiene hijos <hr>';
     }
-} else {
-    echo ' Ninguna de las personas es mayor <hr>';
-}
 
-$list30 = [];
-if ($_POST['e1'] > 30 && $_POST['e1'] < 40) {
-    $list30[] =
-        $_POST['n1'] . ' edad: ' .  $_POST['e1'];
-}
-if ($_POST['e2'] > 30 && $_POST['e2'] < 40) {
-    $list30[] =
-        $_POST['n2'] . ' edad: ' .  $_POST['e2'];
-}
-if ($_POST['e3'] > 30 && $_POST['e3'] < 40) {
-    $list30[] =
-        $_POST['n3'] . ' edad: ' .  $_POST['e3'];
-}
-if ($_POST['e4'] > 30 && $_POST['e4'] < 40) {
-    $list30[] =
-        $_POST['n4'] . ' edad: ' .  $_POST['e4'];
-}
-if (count($list30) > 0) {
-    echo 'Las personas que tienen entre 30 y 40 años son: <hr>';
-    foreach ($list30 as $mayores30) {
-        echo $mayores30 . '<hr>';
+    $listmayores = [];
+    if ($_POST['e1'] > 18) {
+        $listmayores[] =
+            $_POST['n1'] . ' edad: ' .  $_POST['e1'];
     }
-} else {
-    echo ' Ninguna de las personas tiene entre 30 y 40 años<hr>';
+    if ($_POST['e2'] > 18) {
+        $listmayores[] =
+            $_POST['n2'] . ' edad: ' .  $_POST['e2'];
+    }
+    if ($_POST['e3'] > 18) {
+        $listmayores[] =
+            $_POST['n3'] . ' edad: ' .  $_POST['e3'];
+    }
+    if ($_POST['e4'] > 18) {
+        $listmayores[] =
+            $_POST['n4'] . ' edad: ' .  $_POST['e4'];
+    }
+    if (count($listmayores) > 0) {
+        echo 'Las personas mayores son: <hr>';
+        foreach ($listmayores as $mayores) {
+            echo $mayores . '<hr>';
+        }
+    } else {
+        echo ' Ninguna de las personas es mayor <hr>';
+    }
+
+    $list30 = [];
+    if ($_POST['e1'] > 29 && $_POST['e1'] < 41) {
+        $list30[] =
+            $_POST['n1'] . ' edad: ' .  $_POST['e1'];
+    }
+    if ($_POST['e2'] > 29 && $_POST['e2'] < 41) {
+        $list30[] =
+            $_POST['n2'] . ' edad: ' .  $_POST['e2'];
+    }
+    if ($_POST['e3'] > 29 && $_POST['e3'] < 41) {
+        $list30[] =
+            $_POST['n3'] . ' edad: ' .  $_POST['e3'];
+    }
+    if ($_POST['e4'] > 29 && $_POST['e4'] < 41) {
+        $list30[] =
+            $_POST['n4'] . ' edad: ' .  $_POST['e4'];
+    }
+    if (count($list30) > 0) {
+        echo 'Las personas que tienen entre 30 y 40 años son: <hr>';
+        foreach ($list30 as $mayores30) {
+            echo $mayores30 . '<hr>';
+        }
+    } else {
+        echo ' Ninguna de las personas tiene entre 30 y 40 años<hr>';
+    }
 }
